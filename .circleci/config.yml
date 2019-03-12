@@ -43,6 +43,7 @@ jobs:
       - run:
           name: show telegraf container version
           command: |
+            VERSION=$(git describe --always --tags)
             docker run -it --rm "orangesys/${CIRCLE_PROJECT_REPONAME}:${VERSION}" telegraf --version
       - run:
           name: save container image to workspace
