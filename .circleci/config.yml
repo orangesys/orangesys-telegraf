@@ -38,7 +38,7 @@ jobs:
           name: Build container images
           command: |
             VERSION=$(git describe --exact-match --tags 2>nil)
-            docker build --tag "orangesys/${CIRCLE_PROJECT_REPONAME}:${VERSION}"
+            docker build --tag "orangesys/${CIRCLE_PROJECT_REPONAME}:${VERSION}" .
             docker image
       - run:
           name: show telegraf container version
