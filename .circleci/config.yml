@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Build container images
           command: |
-            VERSION=${$(git describe --always --tags 2>/dev/null):-null}
+            VERSION=$(git describe --always --tags)
             docker build --tag "orangesys/${CIRCLE_PROJECT_REPONAME}:${VERSION}" .
             docker images
       - run:
