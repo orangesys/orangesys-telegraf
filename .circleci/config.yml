@@ -75,7 +75,7 @@ jobs:
             docker tag orangesys/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_TAG} orangesys/${CIRCLE_PROJECT_REPONAME}:latest
             docker push orangesys/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_TAG}
             docker push orangesys/${CIRCLE_PROJECT_REPONAME}
-            # curl -X POST https://hooks.microbadger.com/images/orangesys/alpine-grafana/Vc6Ccpu1qw0ndIHKp_q8BwpgQ18=
+            curl -X POST https://hooks.microbadger.com/images/orangesys/orangesys-telegraf/7B4J4QKswsh5IbF-QXzb64ZPdMo=
 
 workflows:
   version: 2
