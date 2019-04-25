@@ -58,8 +58,7 @@ jobs:
     <<: *container_config
     steps:
       - *attach_workspace
-      - setup_remote_docker:
-          version: ${DOCKER_VERSION}
+      - setup_remote_docker
       - *install_docker_client
       - run:
           name: Load Docker image layer cache
